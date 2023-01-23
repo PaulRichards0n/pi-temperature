@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script: my-pi-temp.sh
 # ARM CPU and GPU temperature Monitor for Raspberry Pi saved to file
-# Author: Paul Richardson Ve9Vw  <www.godieppe.com> 
+# Author: Paul Richardson Ve9Vw  <http://polymathic.ca/> 
 # -------------------------------------------------------
 cpu=$(</sys/class/thermal/thermal_zone0/temp)
 echo "$(date) @ $(hostname)"
@@ -28,7 +28,7 @@ cat << "EOF"
 |_| |___|    |_| |___|_|  |_|_|    |_|  |_|\___/|_|\_|___|  |_|   \___/|_|_\  
                                                                               
 EOF
-echo " Author: Paul Richardson Ve9Vw  <www.godieppe.com> under GPL" >> log_temp.txt
+echo " Author: Paul Richardson Ve9Vw  <http://polymathic.ca/> under GPL" >> log_temp.txt
 echo "-------------------------------------------"
 echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
 echo "CPU => $((cpu/1000))'C"
